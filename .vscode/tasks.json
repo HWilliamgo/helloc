@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "clang build active file",
+            "command": "/usr/bin/clang",
+            "args": [
+                "-L/usr/local/Cellar/ffmpeg/4.2.1_2/lib/",
+                "-Wall",
+                "-lavcodec",
+                "-lavformat",
+                "-lavdevice",
+                "-lavfilter",
+                "-lavutil",
+                "-g",
+                "${workspaceFolder}/hello.c",
+                "-o",
+                "${workspaceFolder}/build/hello.o"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
