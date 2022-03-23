@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "avcodec.h": "c"
+        "avcodec.h": "c",
+        "__bit_reference": "c",
+        "__string": "c",
+        "cstring": "c"
     }
 }
